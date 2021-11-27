@@ -16,7 +16,7 @@
   outline: none;
   text-decoration: none;
   text-transform: capitalize;
-  transform: .2s linear;
+  transition: .2s linear;
 }
 
 html {
@@ -41,6 +41,20 @@ html::webkit-scrollbar-thumb {
 
 body {
   background: var(--bg);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: .2rem;
 }
 
 .header {
@@ -86,4 +100,150 @@ body {
 
 #menu-btn {
   display: none;
+}
+
+.search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.search-form.active {
+  transform: scaleY(1);
+}
+
+.search-form__input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  text-transform: none;
+}
+
+.search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+
+.search-form label:hover {
+  color: var(--main-color);
+}
+
+.cart-items__container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #fff;
+  padding: 0 1.5rem;
+}
+
+.cart-items__container.active {
+  right: 0;
+}
+
+.cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.cart-item .fa-times:hover {
+  color: var(--main-color);
+}
+
+.cart-item__img {
+  height: 7rem;
+}
+
+.cart-item__title {
+  font-size: 2rem;
+  color: var(--black);
+  padding: 0.5rem;
+}
+
+.cart-item__price {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+.cart-btn {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar__link {
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+  }
+
+  .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+}
+
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
 }

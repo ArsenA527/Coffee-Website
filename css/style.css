@@ -43,6 +43,10 @@ body {
   background: var(--bg);
 }
 
+section {
+  padding: 2rem 7%;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -194,7 +198,122 @@ body {
   text-align: center;
 }
 
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/home-img.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+.content {
+  max-width: 60rem;
+}
+
+.content-heading {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.content-desc {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+.about__heading,
+.menu__heading,
+.products__heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.about__heading span,
+.menu__heading span,
+.products__heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  flex-wrap: wrap;
+}
+
+.about__image {
+  flex: 1 1 45rem;
+}
+
+.about__image img{
+  width: 100%;
+}
+
+.about__content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.about__content-title {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.about__content-desc {
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.menu__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.box {
+  padding: 5rem;
+  text-align: center;
+  border: var(--border);
+}
+
+.box__img {
+  height: 10rem;
+}
+
+.box__title {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.box__price {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: .5rem 0;
+}
+
+.box__price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.box:hover {
+  background: #fff;
+}
+
+.box:hover > * {
+  color: var(--black);
+}
 
 @media (max-width: 991px) {
   html {
@@ -203,6 +322,10 @@ body {
 
   .header {
     padding: 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
   }
 }
 
@@ -237,6 +360,20 @@ body {
   .search-form {
     width: 90%;
     right: 2rem;
+  }
+
+  .home {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content-heading {
+    font-size: 4.5rem;
+  }
+
+  .content-desc {
+    font-size: 1.5rem;
   }
 }
 
